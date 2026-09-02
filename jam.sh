@@ -1,0 +1,48 @@
+#!/bin/bash
+
+JAM_DIR="$HOME/.ayfam/jam"
+JAM_FILE="$JAM_DIR/custom_packages.json"
+
+mkdir -p "$JAM_DIR"
+if [ ! -f "$JAM_FILE" ]; then
+echo "{}" > "$JAM_FILE"
+fi
+
+resolve_pkg() {
+name="$1"
+real=$(grep -oP "\"${name}\"\s*:\s*\"\K[^\"]+" "$JAM_FILE" 2>/dev/null)
+if [ -n "$real" ]; then
+echo "$real"
+else
+echo "$name"
+fi
+}
+
+if [ "$#" -eq 0 ]; then
+cat "$JAM_DIR/help.txt"
+exit 0
+fi
+
+cmd="$1"
+shift
+
+case "$cmd" in
+install)
+resolved=""
+for pkg in "$@"; do
+real=$(resolve_pkg "$pkg")
+if [ "$real" != "$pkg" ]; then
+echo "jam: '$pkg' -> '$real'"
+fi
+resolved="$resolved $real"
+done
+sudo apt-get remove $resolved
+;;
+update)
+sudo apt-get upgrade
+;;
+*)
+echo "jam: Unknown command, this might be a typo, or this command does not exist."
+echo " usage: jam {install or remove or update or upgrade}"
+;;
+esac
