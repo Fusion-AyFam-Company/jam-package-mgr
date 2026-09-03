@@ -36,7 +36,8 @@ echo "jam: '$pkg' -> '$real'"
 fi
 resolved="$resolved $real"
 done
-sudo apt-get remove $resolved
+# FIXED: Changed from remove to install
+sudo apt-get install $resolved
 ;;
 update)
 sudo apt-get upgrade
