@@ -21,7 +21,7 @@ Built in the Shell language
 For Linux distros that support APT
 Built at Sep 2, 19:18, IST.
 
-If you face any bugs, consider making a issue in the JAM repo. (github.com/Fusion-AyFam-Company/jam-package-mgr/)
+If you face any bugs, consider making a issue in the JAM repo. (www.github.com/Fusion-AyFam-Company/jam-package-mgr/)
 
 This project is Open Source, meaning anyone can edit the code, so feel free to edit the code!
 
