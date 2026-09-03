@@ -10,9 +10,14 @@
 ### Aliases are stored in ~/.ayfam/jam/custom_packages.json
 
 ## Installation
-1, Run this command: `sudo ln -s /path/to/jam.sh /usr/local/bin/jam`
 
-2, Test it: `jam`
+It only takes 1, JUST 1 step:
+
+Run ```mkdir -p $HOME/.ayfam/jam && curl -sL "https://raw.githubusercontent.com/Fusion-AyFam-Company/jam-package-mgr/refs/heads/main/help.txt" -o $HOME/.ayfam/jam/help.txt && curl -sL "https://github.com/Fusion-AyFam-Company/jam-package-mgr/releases/download/RELEASE/jam_1.8_release.deb" -o /tmp/jam.deb && sudo apt install /tmp/jam.deb && rm /tmp/jam.deb``` 
+
+#### This is long because it handles the installation and help.txt downloads.
+
+
 
 ## Credits
 
