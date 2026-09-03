@@ -10,9 +10,9 @@
 ### Aliases are stored in ~/.ayfam/jam/custom_packages.json
 
 ## Installation
-1, Run this command: sudo ln -s /path/to/jam.sh /usr/local/bin/jam
+1, Run this command: `sudo ln -s /path/to/jam.sh /usr/local/bin/jam`
 
-2, Test it: jam
+2, Test it: `jam`
 
 ## Credits
 
