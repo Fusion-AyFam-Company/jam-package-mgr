@@ -42,6 +42,7 @@ without it:
 returns: 
 
 ```jam: Unknown command, this might be a typo, or this command does not exist.```
+
 ``` usage: jam {install or remove or update or upgrade}```
 
 ### Check ln. 46, 47 on jam
