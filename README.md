@@ -19,6 +19,8 @@ Run ```mkdir -p $HOME/.ayfam/jam && curl -sL "https://raw.githubusercontent.com/
 
 ## Other:
 
+### ```Aliases```
+
 Edit ```~/.ayfam/jam/custom_packages.json``` to give different aliases for packages.
 
 For ex.
