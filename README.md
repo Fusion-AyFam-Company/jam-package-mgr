@@ -9,7 +9,7 @@
 
 ### Aliases are stored in ~/.ayfam/jam/custom_packages.json
 
-## Installation
+## Installation:
 
 It only takes 1, JUST 1 step:
 
@@ -17,9 +17,34 @@ Run ```mkdir -p $HOME/.ayfam/jam && curl -sL "https://raw.githubusercontent.com/
 
 #### This is long because it handles the installation and help.txt downloads.
 
+## Other:
 
+Edit ```~/.ayfam/jam/custom_packages.json``` to give different aliases for packages.
 
-## Credits
+For ex.
+
+```{"nm"; "network-manager"}```
+
+will make
+
+```jam install nm```
+
+as
+
+```apt-get install network-manager```
+
+without it:
+
+```jam install nm```
+
+returns: 
+
+```jam: Unknown command, this might be a typo, or this command does not exist.```
+``` usage: jam {install or remove or update or upgrade}```
+
+### Check ln. 46, 47 on jam
+
+## Credits:
 
 Built by justayyyyy (www.github.com/justayyyyy)
 Built in the Shell language
